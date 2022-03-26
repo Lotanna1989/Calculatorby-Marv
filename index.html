@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotanna Marv Calc</title>
+    <link rel="icon" href="./images/marvicon.jpg" type="image/x-icon">
+    
+    <style>
+           *{
+               margin: 0px;
+               padding: 0px;
+               box-sizing: border-box;
+               
+           }
+
+           .container {
+            width: 100%;
+            height: 100vh;
+            background-color: #ededed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 20px darkgrey;
+            background: url("./images/marv.jpg");
+        }
+
+        .calculator {
+            width: 25%;
+            padding: 50px 20px;
+            background-color: #252525;
+            border-radius: 20px;
+            border: 5px solid darkblue;
+        }
+
+        .user-input {
+            width: 100%;
+            height: 80px;
+            /* background-color: red; */
+            border-radius: 20px;
+            border: 1px solid white; 
+         
+        }
+
+        .controls {
+            padding: 20px 0px;
+            width: 100%;
+            /* background-color: yellowgreen; */
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: calc(20%/3);
+            align-items: center;
+            row-gap: 20px;
+            justify-content: center;
+        }
+
+
+        .inp {
+            width: 100%;
+            height: 100%;
+            background-color:transparent;
+            /* border: none; */
+            font-size: 20px;
+            text-indent: 10px;
+            border: none;
+            color: white;
+            font-weight: bold;
+        }
+         
+        .control_button {
+            /* width: 20%; */
+            width: 50px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: lightgrey;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            transition: .1s;
+            font-weight: bold;
+        }
+
+        .control_button:active {
+
+            background-color: #252525;
+            color: white;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <section class="container">
+              <div class="calculator">
+                  <div readonly class="user-input" >
+                      <input class="inp" placeholder="Start Here" >
+
+                        
+                      </div>
+
+
+
+              
+
+              <div class="controls">
+                  <button class="control_button" onclick="setValue(1)">1</button>
+                  <button class="control_button" onclick="setValue(2)">2</button>
+                  <button class="control_button" onclick="setValue(3)">3</button>
+                  <button class="control_button" onclick="setValue('+', 'operator')">+</button>
+                 
+                  <button class="control_button" onclick="setValue(4)">4</button>
+                  <button class="control_button" onclick="setValue(5)">5</button>
+                  <button class="control_button" onclick="setValue(6)">6</button>
+                  <button class="control_button"onclick="setValue('-', 'operator')">-</button>
+                  
+                  <button class="control_button" onclick="setValue(7)">7</button>
+                  <button class="control_button" onclick="setValue(8)">8</button>
+                  <button class="control_button" onclick="setValue(9)">9</button>
+                  <button class="control_button"onclick="setValue('*', 'operator')">*</button>
+
+                  <button class="control_button" onclick="setValue(0)">0</button>
+                  <button class="control_button" onclick="setValue('00')">00</button>
+                  <button class="control_button"onclick="setValue('/', 'operator')">/</button>
+                  <button class="control_button" onclick="setValue('.', 'operator')">.</button>
+                  
+                  <button class="control_button" onclick="squareRoot()">Sqrt</button>
+                  <button class="control_button"onclick="calculate()">=</button>
+                  <button class="control_button" onclick="backspace()">CLR</button>
+                  <button class="control_button" onclick="clearAll()">AC</button>
+                  
+
+
+              </div>
+              </div>   
+    </section>
+
+
+
+
+
+    <script src="calculator.js"></script>
+</body>
+</html>
